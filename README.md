@@ -23,7 +23,7 @@ This project analyzes Tesla's stock performance and compares it with market indi
   Outputs include prediction graphs and a CSV file containing the forecasted values.
 
 ### `market_correlation.py`
-- **Description**: Compares Tesla's stock performance with the S&P 500, focusing on percentage changes (yearly and monthly). Provides correlation analysis and visualizations.
+- **Description**: Compares Tesla's stock performance with the S&P 500, focusing on percentage changes (yearly). Provides correlation analysis and visualizations.
 - **Execution**:
   ```bash
   python market_correlation.py
