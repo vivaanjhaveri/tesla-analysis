@@ -1,6 +1,7 @@
-
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+import numpy as np
 
 # Load Tesla dataset
 file_path = 'tesla_data.csv'
@@ -32,22 +33,19 @@ for date, event in events.items():
         nearest_index = df_tesla.index.get_indexer([event_date], method='nearest')[0]
         adjusted_events[df_tesla.index[nearest_index]] = event
 
-# Plot stock prices with annotations for events
+# Generate unique colors for each event
+colors = cm.tab10(np.linspace(0, 1, len(adjusted_events)))
+
+# Plot stock prices with unique colors for each event
 plt.figure(figsize=(12, 6))
 plt.plot(df_tesla['Close'], label='Tesla Stock Price', color='blue')
-for date, event in adjusted_events.items():
-    plt.axvline(date, color='red', linestyle='--', alpha=0.7)
-    plt.text(date,
-             df_tesla['Close'].mean(),
-             event,
-             rotation=90,
-             verticalalignment='center',
-             color='red')
+for (date, event), color in zip(adjusted_events.items(), colors):
+    plt.axvline(date, color=color, linestyle='--', alpha=1.0, label=event)
 
 plt.title('Tesla Stock Prices with Major Events (2023-2024)')
 plt.xlabel('Date')
 plt.ylabel('Price (USD)')
-plt.legend()
+plt.legend(loc='lower center', bbox_to_anchor=(0.5, -0.5), ncol=2, frameon=False)  # Legend at the bottom
 plt.grid()
 plt.tight_layout()
 plt.show()
