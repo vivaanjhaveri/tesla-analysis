@@ -12,7 +12,6 @@ This project analyzes Tesla's stock performance and compares it with market indi
   ```bash
   python 2024_analysis.py
   ```
-  This script generates plots and saves results for further analysis.
 
 ### `2025_time_series_forecasting.py`
 - **Description**: Uses ARIMA models to forecast Tesla's stock prices for the year 2025, visualizing predicted trends along with confidence intervals.
@@ -20,7 +19,6 @@ This project analyzes Tesla's stock performance and compares it with market indi
   ```bash
   python 2025_time_series_forecasting.py
   ```
-  Outputs include prediction graphs and a CSV file containing the forecasted values.
 
 ### `market_correlation.py`
 - **Description**: Compares Tesla's stock performance with the S&P 500, focusing on percentage changes (yearly). Provides correlation analysis and visualizations.
@@ -28,7 +26,6 @@ This project analyzes Tesla's stock performance and compares it with market indi
   ```bash
   python market_correlation.py
   ```
-  This script calculates correlations and saves the data to CSV.
 
 ### `overall_analysis.py`
 - **Description**: Combines various analyses to provide an overarching view of Tesla's stock performance, including key statistics and trends.
@@ -36,7 +33,6 @@ This project analyzes Tesla's stock performance and compares it with market indi
   ```bash
   python overall_analysis.py
   ```
-  Outputs include multiple visualizations and summaries.
 
 ### `tesla_stock_events_chart.py`
 - **Description**: Annotates Tesla's stock price chart with major news events from 2023-2024. Events are represented as vertical lines with labels.
@@ -44,7 +40,6 @@ This project analyzes Tesla's stock performance and compares it with market indi
   ```bash
   python tesla_stock_events_chart.py
   ```
-  Generates a chart with event annotations and saves it as an image.
 
 ### `yearwise_comparison.py`
 - **Description**: Compares Tesla's stock price changes year-over-year, providing percentage changes and visualizations.
@@ -52,8 +47,6 @@ This project analyzes Tesla's stock performance and compares it with market indi
   ```bash
   python yearwise_comparison.py
   ```
-  Outputs a year-over-year comparison chart and saves the data to CSV.
-
 ---
 
 ## Data Files
